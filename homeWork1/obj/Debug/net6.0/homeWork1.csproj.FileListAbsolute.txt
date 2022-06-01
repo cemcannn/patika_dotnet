@@ -1,0 +1,15 @@
+C:\MyProjects\patika_dotnet\homeWork1\bin\Debug\net6.0\homeWork1.exe
+C:\MyProjects\patika_dotnet\homeWork1\bin\Debug\net6.0\homeWork1.deps.json
+C:\MyProjects\patika_dotnet\homeWork1\bin\Debug\net6.0\homeWork1.runtimeconfig.json
+C:\MyProjects\patika_dotnet\homeWork1\bin\Debug\net6.0\homeWork1.dll
+C:\MyProjects\patika_dotnet\homeWork1\bin\Debug\net6.0\homeWork1.pdb
+C:\MyProjects\patika_dotnet\homeWork1\obj\Debug\net6.0\homeWork1.csproj.AssemblyReference.cache
+C:\MyProjects\patika_dotnet\homeWork1\obj\Debug\net6.0\homeWork1.GeneratedMSBuildEditorConfig.editorconfig
+C:\MyProjects\patika_dotnet\homeWork1\obj\Debug\net6.0\homeWork1.AssemblyInfoInputs.cache
+C:\MyProjects\patika_dotnet\homeWork1\obj\Debug\net6.0\homeWork1.AssemblyInfo.cs
+C:\MyProjects\patika_dotnet\homeWork1\obj\Debug\net6.0\homeWork1.csproj.CoreCompileInputs.cache
+C:\MyProjects\patika_dotnet\homeWork1\obj\Debug\net6.0\homeWork1.dll
+C:\MyProjects\patika_dotnet\homeWork1\obj\Debug\net6.0\refint\homeWork1.dll
+C:\MyProjects\patika_dotnet\homeWork1\obj\Debug\net6.0\homeWork1.pdb
+C:\MyProjects\patika_dotnet\homeWork1\obj\Debug\net6.0\homeWork1.genruntimeconfig.cache
+C:\MyProjects\patika_dotnet\homeWork1\obj\Debug\net6.0\ref\homeWork1.dll
