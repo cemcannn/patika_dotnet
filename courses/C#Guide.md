@@ -50,3 +50,16 @@ Varsayılan boyutu başlangıç olarak 4'tür. Aşıldığından otomatik olarak
 Değişken veri tipi kullanımı kulağa ilk etapta çok konforlu gelse de risk barındır. Listeden okudugunuz verinin tipinin ne olduğunu bilmemek güvenli bir yaklaşım değildir. Tip dönüşümleri sırasında hata ihtimalini arttırır.
 
 [Örnek Kodlar](arrayList.cs)
+
+## Dictionary
+
+Dictionary koleksiyonunda key-value yani anahtar-deger denen 2 kavram ile karşılaşıyoruz. Dizilere eklediğimiz elemanları value, index lerini ise key olarak düşünebilirsiniz.
+
+Dictionary lerin elemanlarının anahtarları birbirinden farklı olmalıdır. Aynı anahtar kullanılarak 2 değer saklanamaz. Compile edilirken hata verm
+
+Örnek söz dizimi şu şekildedir:
+```c#
+Dictionary<Key_Veri_Tipi, Value_Veri_Tipi> dictionary_adi = new Dictionary<Key_Veri_Tipi, Value_Veri_Tipi>();
+```
+
+[Örnek Kodlar](dictionary.cs)
