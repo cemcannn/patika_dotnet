@@ -1,6 +1,6 @@
 using System;
 
-namespace array_list
+namespace class_concept
 {
     class Program
     {
