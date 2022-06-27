@@ -217,3 +217,61 @@ Normal metotlar gibi kurucu metotları da static olarak tanımlayabiliriz. Sın�
 Metotlar ve özellikler gibi sınıflar da static anahtar kelimesi ile oluşturulabilirler. Yukarıdaki örnekte de görebileceğiniz üzere normal sınıflar içerisinde static metotlar ve üyeler kullanabiliriz. Peki o halde neden sınıfları static yapma ihtiyacımız olsun? Buna okunabilirliği arttırmak için diyebiliriz.
 
 Bir sınıfın tüm üyeleri static ise sınıfı da static yapmak kullanımı kolaylaştıran bir yaklaşım olur.
+
+[Örnek Kodlar](staticClass.cs)
+
+## Struct(Yapı) Nedir ?
+
+Struct'lar yani yapılar sınıflara çok benzerler. Struct ile yapıp sınıf ile yapamayacağız bir işlem yoktur diyebiliriz. Peki o halde struct yani yapılara neden ihtiyaç duyulur?
+
+Class kullanmanızı gerektirecek kadar komplex olmayan yapılarınız varsa ve verileri kapsüllemek işinizi görecekse yapıları tercih edebilirsiniz.
+
+Yapıların özellikleri:
+
+- Class lar referans tipli özellikler gösterir, Yapılar ise değer tipli özellikler gösterirler. En temel fark budur.
+- Diğer struct ya da sınıflardan kalıtım almazlar.
+- Interface'lerden kalıtım alabilirler.
+- new anahtar sözcüğü ile nesneleri yaratılabilir.
+- Sınıflar gibi metot, property ve field'lardan oluşurlar.
+- Sınıf içerisinde struct, struct içerisinde de sınıf oluşturulabilir.
+- Static üye barındırabilirler.
+
+Yapıların söz dizimi:
+
+```c#
+struct Ogrenci {
+    public string Isim;
+    public string Soyisim {get;set;}
+    public static int OgrenciSayısı=0;
+}
+```
+
+Uzmanlar 16 byte'a kadar olan verileri saklamak için "Stuck" 16 byte'tan büyük verileri saklamak için "Class" kullanmamızı öneriyorlar.
+Class'lar Heap'te tutuluyor, Stuck'lar Stack'te tutulduğu için çok performans istemeyen işlerde Stuck kullanmalıyız.
+
+[Örnek Kodlar](structConcept.cs)
+
+## Enum
+
+Uygulama geliştirirken sabit değerlerle çalışmak durumunda kalırız. Bu noktalarda okunabilirliği yüksek bir program yazmak istiyorsak enum'lardan faydalanırız.
+
+"enum" anahtar kelimesi enumeration yani numaralandırma kelimesinden gelir. Sayısal verilerı string ifadelerle saklamanızı sağlar. Okunabilirliğe katkısı da tam olarak burdan gelir diyebiliriz.
+
+```c#
+enum Gunler 
+{
+    Pazartesi, 
+    Sali, 
+    Carsamba, 
+    Persembe, 
+    Cuma, 
+    Cumartesi, 
+    Pazar
+};
+```
+
+Yukarıda Gunler enum'ını görüyorsunuz. Enum lar default olarak 1'den başlar.
+
+Gunler.Pazartesi ifadesi ile Pazartesi'nin string ifadesine erişebiliriz. Eğer Pazartesinin 1. gün oldugu bilgisine ihtiyacımız varsa o da şu şekildedir: (int)Gunler.Pazartesi**
+
+[Örnek Kodlar](enum.cs)
