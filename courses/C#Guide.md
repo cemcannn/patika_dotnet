@@ -275,3 +275,139 @@ Yukarıda Gunler enum'ını görüyorsunuz. Enum lar default olarak 1'den başla
 Gunler.Pazartesi ifadesi ile Pazartesi'nin string ifadesine erişebiliriz. Eğer Pazartesinin 1. gün oldugu bilgisine ihtiyacımız varsa o da şu şekildedir: (int)Gunler.Pazartesi**
 
 [Örnek Kodlar](enum.cs)
+
+---
+
+# Object Orientented Programming Nedir?
+
+Nesneye dayalı programlama Object Oriented Programming ismiyle ilk olarak 1960'larda yazılım geliştirme çözümü olarak ortaya çıktı. Yıllar içinde de olgunlaştı. Günümüzde de en sık kullanılan yaklaşımlardan biri haline geldi. Nesne yönelimli yaklaşım gerçek hayattaki modellerin yazılıma adapte edilebileceğini savunan bir yaklaşımdır.
+
+Not: İlerleyen kısımlarında Nesne Yönelimli Programlama'dan yani Object Oriented Programming kavramından OOP ismiyle bahsedilebilir.
+
+Günümüzde C# ile birlikte bir çok dil nesne yönelimli programlama yani OOP desteği sunar. OOP 3 ana prensipten oluşur.
+
+Encapsulation (Kapsülleme)
+Polymorphism (Çok Biçimcilik)
+Inheritance (Kalıtım)
+
+## Inheritance (Kalıtım)
+
+Bir sınıfın başka bir üst sınıftan miras almasına kalıtım denir. Miras veren sınıf tüm özelliklerini alt sınıfa aktarmış olur.
+
+Sözdizimi :
+
+<code> Kalıtım Alacak Alt Sınıf : Miras Verecek olan Üst Sınıf </code>
+
+Kalıtım çok soyut bir kavram olması itibariyle anlaşılması zor bir konudur. Bunun için en kolay anlaşılabilecek örnekler üzerinden denenmesinin faydalı olduğunu düşünüyorum. Bu da Canlılar - Hayvanlar - Bitkiler ayrımı ile anlaşılabilir.
+
+Hayvanlar ve Bitkileri canlılar sınıfından türeyen 2 sınıf gibi düşünebilirsiniz. Çünkü hem hayvanların hem bitlilerin ortak bazı özellik ve davranışlar vardır. Bunlar ne olabilir ?
+
+Canlılar:
+
+- Beslenme
+- Solunum
+- Boşaltım
+
+Bu davranışlar hem hayvanlarda hem bitkilerde ortak olduğu için bir sınıf içerisinde tanımlanıp alt sınıflara yani hayvan ve bitkilere kalıtım olarak aktarılabilir. Tıpkı doğada da olduğu gibi.
+
+Peki Hayvanlar sınıfına yakından bakarsak; Kus ve Ordek olarak 2 ayrı sınıf türetebiliriz. Tüm hayvanlarda ortak görülebilecek bitkilerden farklı olarak sürü haline hareket ettiklerini görürüz. Kus ve ördek içinse uçma ve yüzme gibi 2 ayrı davranış var.
+
+Hayvanlar:
+
+- Sürü halinde hareket etme
+
+Kuş:
+
+- Uçmak
+
+Ördek:
+
+- Yüzmek
+
+Buradaki örnekleri arttırmak mümkün. Yazılımda kalıtım üzerinde çalışırken en önemli olan nokta bu gruplamayı doğru yapabilmektir.
+
+Şimdi yukarıdaki modellemeyi koda dökerek sınıfları ve metotlarını yazalım.
+
+Canlılar:
+```c#
+public class Canlilar {
+    public void Beslenme(){
+        Console.WriteLine("Canlılar beslenir.");        
+    }
+
+    public void Solunum(){
+        Console.WriteLine("Canlılar solunum yapar."); 
+    }
+
+    public void Bosaltim()
+    {
+        Console.WriteLine("Canlılar boşaltım Yapar."); 
+    }
+}
+```
+
+Hayvanlar:
+
+```c#
+public class Hayvanlar: Canlilar{
+    public void SuruHalindeHareket(){
+        Console.WriteLine("Hayvanlar sürüler halinde hareket eder."); 
+    }
+}
+
+public class Kus:Hayvanlar{
+    public void Ucmak(){
+        Console.WriteLine("Kuşlar uçar");
+    }
+}
+
+public class Ordek:Hayvanlar{
+    public void Yuzmek(){
+        Console.WriteLine("Ördekler yüzer");
+    }
+}
+```
+
+Bitkiler:
+
+```c#
+public class Bitkiler: Canlilar{
+    public void FotosentezYapmak(){
+        Console.WriteLine("Bitkiler fotosentez yapar."); 
+    }
+}
+
+public class TohumluBitkiler:Bitkiler{
+    public void TohumlaCogalma(){
+        Console.WriteLine("Tohumlu bitkiler tohumla çoğalır.");
+    }
+}
+
+ public class TohumsuzBitkiler:Bitkiler{
+    public void SporlaCogalma(){
+        Console.WriteLine("Tohumsuz bitkiler sporla çoğalır.");
+    }
+}
+```
+
+Şimdi Tohumlu bitkiler ve Ördek sınıfının nesnesini yaratalım.
+
+```c#
+TohumluBitkiler tohumluBitki = new TohumluBitkiler();
+tohumluBitki.Beslenme();
+tohumluBitki.Bosaltim();
+tohumluBitki.Solunum();
+tohumluBitki.FotosentezYapmak();
+tohumluBitki.TohumlaCogalma();
+
+Console.WriteLine("**********************");
+
+Ordek ordek = new Ordek();
+ordek.Solunum();
+ordek.Beslenme();
+ordek.Bosaltim();
+ordek.SuruHalindeHareket();
+ordek.Yuzmek(); 
+```
+
+Yukarıdaki örnekte görebileceğiniz üzere. Her sınıf kendi kalıtım aldığı sınıfın metotlarına erişebiliyor. Çünkü üst sınıfından belirli davranışları miras almıştır.
