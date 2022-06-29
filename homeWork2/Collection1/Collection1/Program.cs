@@ -47,10 +47,10 @@ namespace Collection1
             notPrimeNumbers.Reverse();
 
             Console.WriteLine("Count of Prime Numbers : " + primeNumbers.Count);
-            Console.WriteLine("Summary of Prime Numbers : " + sumPrime/primeNumbers.Count);
+            Console.WriteLine("Average of Prime Numbers : " + sumPrime/primeNumbers.Count);
 
             Console.WriteLine("Count of Not Prime Numbers : " + notPrimeNumbers.Count);
-            Console.WriteLine("Summary of Not Prime Numbers : " + sumNotPrime/notPrimeNumbers.Count);
+            Console.WriteLine("Average of Not Prime Numbers : " + sumNotPrime/notPrimeNumbers.Count);
         }
     }
 }
