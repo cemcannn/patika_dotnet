@@ -1,0 +1,16 @@
+C:\MyProjects\patika_dotnet\homeWork2\Collection3\Collection3\bin\Debug\net5.0\Collection3.exe
+C:\MyProjects\patika_dotnet\homeWork2\Collection3\Collection3\bin\Debug\net5.0\Collection3.deps.json
+C:\MyProjects\patika_dotnet\homeWork2\Collection3\Collection3\bin\Debug\net5.0\Collection3.runtimeconfig.json
+C:\MyProjects\patika_dotnet\homeWork2\Collection3\Collection3\bin\Debug\net5.0\Collection3.runtimeconfig.dev.json
+C:\MyProjects\patika_dotnet\homeWork2\Collection3\Collection3\bin\Debug\net5.0\Collection3.dll
+C:\MyProjects\patika_dotnet\homeWork2\Collection3\Collection3\bin\Debug\net5.0\Collection3.pdb
+C:\MyProjects\patika_dotnet\homeWork2\Collection3\Collection3\obj\Debug\net5.0\Collection3.csproj.AssemblyReference.cache
+C:\MyProjects\patika_dotnet\homeWork2\Collection3\Collection3\obj\Debug\net5.0\Collection3.GeneratedMSBuildEditorConfig.editorconfig
+C:\MyProjects\patika_dotnet\homeWork2\Collection3\Collection3\obj\Debug\net5.0\Collection3.AssemblyInfoInputs.cache
+C:\MyProjects\patika_dotnet\homeWork2\Collection3\Collection3\obj\Debug\net5.0\Collection3.AssemblyInfo.cs
+C:\MyProjects\patika_dotnet\homeWork2\Collection3\Collection3\obj\Debug\net5.0\Collection3.csproj.CoreCompileInputs.cache
+C:\MyProjects\patika_dotnet\homeWork2\Collection3\Collection3\obj\Debug\net5.0\Collection3.dll
+C:\MyProjects\patika_dotnet\homeWork2\Collection3\Collection3\obj\Debug\net5.0\refint\Collection3.dll
+C:\MyProjects\patika_dotnet\homeWork2\Collection3\Collection3\obj\Debug\net5.0\Collection3.pdb
+C:\MyProjects\patika_dotnet\homeWork2\Collection3\Collection3\obj\Debug\net5.0\Collection3.genruntimeconfig.cache
+C:\MyProjects\patika_dotnet\homeWork2\Collection3\Collection3\obj\Debug\net5.0\ref\Collection3.dll
