@@ -7,6 +7,12 @@ namespace inheritance
         protected void FotosentezYapmak(){//Sadece bulunduğu class ve kalıtım alan sınıf erişebilir.
             System.Console.WriteLine("Bitkiler fotosentez yapar.");
         }
+
+        public override void UyaranTepki()//Canlılar sınıfındaki UyaranTepki sınıfını override etti.
+        {
+            base.UyaranTepki();
+            System.Console.WriteLine("Bitkiler güneşe tepki verir.");
+        }
     }
     public class TohumluBitkiler : Bitkiler { //Bitkiler sınıfından kalıtım alıyor.
         public TohumluBitkiler(){//Bitkiler ve Canlilar sınıfının property'lerine erişmek için constructor  method oluşturuyoruz.

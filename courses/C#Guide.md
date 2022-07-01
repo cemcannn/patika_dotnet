@@ -411,3 +411,29 @@ ordek.Yuzmek();
 ```
 
 Yukarıdaki örnekte görebileceğiniz üzere. Her sınıf kendi kalıtım aldığı sınıfın metotlarına erişebiliyor. Çünkü üst sınıfından belirli davranışları miras almıştır.
+
+## Polymorphism (Çok Biçimcilik)
+
+Çok biçimcilik ile birlikte hayatımıza sanal yani virtual metotlar giriyor. Virtual metotlar ile nesne yönelimli programlama ilkesi olan polymorphism'i uygularız. Sanal metotlar kalıtım alınan yani miras veren sınıf içerisinde yazılan ve daha sonra alt sınıflarda yeniden yazılabilen metotlardır. Bunu da virtual ve override anahtar kelimeleri sağlar.
+
+Virtual metot tanımı :
+
+```c#
+public virtual void UyaranlaraTepki(){
+    Console.WriteLine("Canlılar uyaranlara tepki verir.");
+}
+```
+
+Alt sınıf içerisinde override metot kullanımı:
+
+```c#
+public override void UyaranlaraTepki()
+{
+    base.UyaranlaraTepki(); // üst sınıftaki komutları çalıştırır.
+    Console.WriteLine("Bitkiler güneşe tepki verir.");
+}
+```
+
+### Sealed
+
+Bir sınıfın başka sınıflar tarafından türetilmesini engellemek istiyorsak yani kalıtım vermeyi engellemek istiyorsak "Sealed" keyword'ünü kullanıyoruz.

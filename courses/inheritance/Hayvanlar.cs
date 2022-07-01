@@ -7,6 +7,12 @@ namespace inheritance
         protected void Adaptasyon(){//Sadece bulunduğu class ve kalıtım alan sınıf erişebilir.
             System.Console.WriteLine("Hayvanlar adaptasyon kurabilir.");
         }
+
+        public override void UyaranTepki()//Canlılar sınıfındaki UyaranTepki sınıfını override etti.
+        {
+            base.UyaranTepki();
+            System.Console.WriteLine("Hayvanlar temasa tepki verir.");
+        }
     }
     public class Surungenler : Hayvanlar { //Hayvanlar sınıfından kalıtım alıyor.
         public Surungenler(){//Hayvanlar ve Canlilar sınıfının property'lerine erişmek için constructor method oluşturuyoruz.

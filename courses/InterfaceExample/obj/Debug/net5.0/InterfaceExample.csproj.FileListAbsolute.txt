@@ -1,0 +1,16 @@
+C:\MyProjects\patika_dotnet\courses\InterfaceExample\bin\Debug\net5.0\InterfaceExample.exe
+C:\MyProjects\patika_dotnet\courses\InterfaceExample\bin\Debug\net5.0\InterfaceExample.deps.json
+C:\MyProjects\patika_dotnet\courses\InterfaceExample\bin\Debug\net5.0\InterfaceExample.runtimeconfig.json
+C:\MyProjects\patika_dotnet\courses\InterfaceExample\bin\Debug\net5.0\InterfaceExample.runtimeconfig.dev.json
+C:\MyProjects\patika_dotnet\courses\InterfaceExample\bin\Debug\net5.0\InterfaceExample.dll
+C:\MyProjects\patika_dotnet\courses\InterfaceExample\bin\Debug\net5.0\InterfaceExample.pdb
+C:\MyProjects\patika_dotnet\courses\InterfaceExample\obj\Debug\net5.0\InterfaceExample.csproj.AssemblyReference.cache
+C:\MyProjects\patika_dotnet\courses\InterfaceExample\obj\Debug\net5.0\InterfaceExample.GeneratedMSBuildEditorConfig.editorconfig
+C:\MyProjects\patika_dotnet\courses\InterfaceExample\obj\Debug\net5.0\InterfaceExample.AssemblyInfoInputs.cache
+C:\MyProjects\patika_dotnet\courses\InterfaceExample\obj\Debug\net5.0\InterfaceExample.AssemblyInfo.cs
+C:\MyProjects\patika_dotnet\courses\InterfaceExample\obj\Debug\net5.0\InterfaceExample.csproj.CoreCompileInputs.cache
+C:\MyProjects\patika_dotnet\courses\InterfaceExample\obj\Debug\net5.0\InterfaceExample.dll
+C:\MyProjects\patika_dotnet\courses\InterfaceExample\obj\Debug\net5.0\refint\InterfaceExample.dll
+C:\MyProjects\patika_dotnet\courses\InterfaceExample\obj\Debug\net5.0\InterfaceExample.pdb
+C:\MyProjects\patika_dotnet\courses\InterfaceExample\obj\Debug\net5.0\InterfaceExample.genruntimeconfig.cache
+C:\MyProjects\patika_dotnet\courses\InterfaceExample\obj\Debug\net5.0\ref\InterfaceExample.dll
