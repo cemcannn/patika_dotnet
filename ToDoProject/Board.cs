@@ -8,10 +8,12 @@ namespace ToDoProject
 {
     class Board
     {
+
         List<Card> toDoLine = new List<Card>();
         List<Card> inProgressLine = new List<Card>();
         List<Card> doneLine = new List<Card>();
         List<TeamMember> team = new List<TeamMember>();
+
 
         string select;
         int value;
