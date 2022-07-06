@@ -1,0 +1,16 @@
+C:\MyProjects\patika_dotnet\TodebConcoleApp\bin\Debug\net5.0\TodebConcoleApp.exe
+C:\MyProjects\patika_dotnet\TodebConcoleApp\bin\Debug\net5.0\TodebConcoleApp.deps.json
+C:\MyProjects\patika_dotnet\TodebConcoleApp\bin\Debug\net5.0\TodebConcoleApp.runtimeconfig.json
+C:\MyProjects\patika_dotnet\TodebConcoleApp\bin\Debug\net5.0\TodebConcoleApp.runtimeconfig.dev.json
+C:\MyProjects\patika_dotnet\TodebConcoleApp\bin\Debug\net5.0\TodebConcoleApp.dll
+C:\MyProjects\patika_dotnet\TodebConcoleApp\bin\Debug\net5.0\TodebConcoleApp.pdb
+C:\MyProjects\patika_dotnet\TodebConcoleApp\obj\Debug\net5.0\TodebConcoleApp.csproj.AssemblyReference.cache
+C:\MyProjects\patika_dotnet\TodebConcoleApp\obj\Debug\net5.0\TodebConcoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\MyProjects\patika_dotnet\TodebConcoleApp\obj\Debug\net5.0\TodebConcoleApp.AssemblyInfoInputs.cache
+C:\MyProjects\patika_dotnet\TodebConcoleApp\obj\Debug\net5.0\TodebConcoleApp.AssemblyInfo.cs
+C:\MyProjects\patika_dotnet\TodebConcoleApp\obj\Debug\net5.0\TodebConcoleApp.csproj.CoreCompileInputs.cache
+C:\MyProjects\patika_dotnet\TodebConcoleApp\obj\Debug\net5.0\TodebConcoleApp.dll
+C:\MyProjects\patika_dotnet\TodebConcoleApp\obj\Debug\net5.0\refint\TodebConcoleApp.dll
+C:\MyProjects\patika_dotnet\TodebConcoleApp\obj\Debug\net5.0\TodebConcoleApp.pdb
+C:\MyProjects\patika_dotnet\TodebConcoleApp\obj\Debug\net5.0\TodebConcoleApp.genruntimeconfig.cache
+C:\MyProjects\patika_dotnet\TodebConcoleApp\obj\Debug\net5.0\ref\TodebConcoleApp.dll
