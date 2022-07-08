@@ -6,8 +6,8 @@ namespace ToDoProject
     {
         static void Main(string[] args)
         {
-            Board 
-            Start();
+            Board board = new Board();
+            board.Start();
         }
     }
 }

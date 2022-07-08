@@ -8,42 +8,48 @@ namespace ToDoProject
 {
     class Board
     {
-
         List<Card> toDoLine = new List<Card>();
         List<Card> inProgressLine = new List<Card>();
         List<Card> doneLine = new List<Card>();
         List<TeamMember> team = new List<TeamMember>();
 
-
         string select;
-        int value;
         public void Start()
         {
             TeamMember member1 = new TeamMember() { Id = 1, Fullname = "Ahmet Köse"};
             TeamMember member2 = new TeamMember() { Id = 2, Fullname = "Osman Bayar" };
             TeamMember member3 = new TeamMember() { Id = 3, Fullname = "Aslı Kırbaş" };
 
-            Console.WriteLine("Please select you want to do : \n" +
-                "(1) List Board\n" +
-                "(2) Add Card to Board\n" +
-                "(3) Delete Card from Board\n" +
-                "(4) Move Card");
+            team.Add(member1);
+            team.Add(member2);
+            team.Add(member3);
+
+
             while (true)
             {
+                Console.WriteLine("************************************");
+                Console.WriteLine("Please select you want to do : \n" +
+                                  "(1) List Board\n" +
+                                  "(2) Add Card to Board\n" +
+                                  "(3) Delete Card from Board\n" +
+                                  "(4) Move Card");
+                
                 select = Console.ReadLine();
                 if (select.Equals("1"))
                 {
-                    Listing();
+                    ListLine();
                 }
                 else if (select.Equals("2"))
                 {
-                    Adding();
+                    AddCard();
                 }
                 else if (select.Equals("3"))
                 {
+                    DeleteCard();
                 }
                 else if (select.Equals("4"))
                 {
+                    MoveCard();
                 }
                 else
                 {
@@ -51,7 +57,7 @@ namespace ToDoProject
                 }
             }
         }
-        public void Listing()
+        public void ListLine()
         {
             Console.WriteLine("TODO Line\n" +
                 "************************");
@@ -61,9 +67,9 @@ namespace ToDoProject
                 Console.WriteLine("Title            : {0}\n" +
                                   "Description      : {1}\n" +
                                   "Assigned Person  : {2}\n" +
-                                  "Size             : {3}\n", item.Title, item.Description, item.AssignedPerson, item.CardSize);
+                                  "Size             : {3}\n", item.Title, item.Description, item.AssignedPerson.Fullname, item.CardSize);
             }
-            Console.WriteLine("TODO Line\n" +
+            Console.WriteLine("IN PROGRESS Line\n" +
                             "************************");
             foreach (var item in inProgressLine)
             {
@@ -71,9 +77,9 @@ namespace ToDoProject
                 Console.WriteLine("Title            : {0}\n" +
                                   "Description      : {1}\n" +
                                   "Assigned Person  : {2}\n" +
-                                  "Size             : {3}\n", item.Title, item.Description, item.AssignedPerson, item.CardSize);
+                                  "Size             : {3}\n", item.Title, item.Description, item.AssignedPerson.Fullname, item.CardSize);
             }
-            Console.WriteLine("TODO Line\n" +
+            Console.WriteLine("DONE Line\n" +
                 "************************");
             foreach (var item in doneLine)
             {
@@ -81,37 +87,35 @@ namespace ToDoProject
                 Console.WriteLine("Title            : {0}\n" +
                                   "Description      : {1}\n" +
                                   "Assigned Person  : {2}\n" +
-                                  "Size             : {3}\n", item.Title, item.Description, item.AssignedPerson, item.CardSize);
+                                  "Size             : {3}\n", item.Title, item.Description, item.AssignedPerson.Fullname, item.CardSize);
             }
         }
-        public void Adding()
-        {
-            
+        public void AddCard()
+        {  
             Console.Write("Please input card title                          : ");
             string newTitle = Console.ReadLine().ToLower();
             Console.Write("Please input description                         : ");
             string newDescription = Console.ReadLine().ToLower();
             Console.Write("Please select size -> XS(1),S(2),M(3),L(4),XL(5) : ");
-            Size newCardSize = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Please input person                              : ");
+            Size newCardSize = (Size)int.Parse(Console.ReadLine());
+            Console.WriteLine("Please input person                              : ");
             TeamMember newAssignedPerson = Assign();
             
-
             Card card = new Card(newTitle, newDescription, newAssignedPerson, newCardSize);
             toDoLine.Add(card);
         }
-        public void Delete()
+        public void DeleteCard()
         {
             Console.Write("First you need to select the card you want to delete.\n" +
                 "Please write the card title : ");
-            value = Console.ReadLine().ToLower();
+            string value = Console.ReadLine().ToLower();
             
             foreach (Card item in toDoLine)
             {
                 if (value.Equals(item.Title))
                 {
                     toDoLine.Remove(item);
-                    goto LoopEnd;
+                    break;
                 }
             }
             foreach (Card item in inProgressLine)
@@ -119,7 +123,7 @@ namespace ToDoProject
                 if (value.Equals(item.Title))
                 {
                     inProgressLine.Remove(item);
-                    goto LoopEnd;
+                    break;
                 }
             }
             foreach (Card item in doneLine)
@@ -127,37 +131,31 @@ namespace ToDoProject
                 if (value.Equals(item))
                 {
                     doneLine.Remove(item);
-                    goto LoopEnd;
+                    break;
                 }
             }
             Console.WriteLine("Doesn't match any card! Please select options below : \n" +
                 "* Finalize the deletion : (1)" +
                 "* To try again          : (2)");
-            while (true)
+            switch (Console.ReadLine())
             {
-                select = Console.ReadLine();
-                if (select.Equals("1"))
-                {
-                    goto LoopEnd;
-                }
-                else if (select.Equals("2"))
-                {
-                    Delete();
-                }
-                else
-                {
-                    Console.WriteLine("Invalid Choice! Please select one of the options above!");
-                }
+                case "1":
+                    break;
+                case "2":
+                    DeleteCard();
+                    break;
+                default:
+                    Console.WriteLine("Please select a valid command!");
+                    break;
             }
-        LoopEnd:
             Console.WriteLine("Press any key to continue...");
             Console.ReadLine();
         }
-        public void Move()
+        public void MoveCard()
         {
             Console.Write("First you need to select the card you want to delete.\n" +
                           "Please write the card title : ");
-            value = Console.ReadLine().ToLower();
+            string value = Console.ReadLine().ToLower();
             foreach (Card item in toDoLine)
             {
                 if (value.Equals(item.Title))
@@ -238,16 +236,8 @@ namespace ToDoProject
                     "Full Name : {1}", person.Id, person.Fullname);
             }
             Console.Write("Please select team member with id from above list : ");
-            value = Convert.ToInt32(Console.ReadLine());
-            foreach (var person in team)
-            {
-                if (value == person.Id)
-                {
-                    return person;
-                }
-            }
-            return null;
-
+            int value = Convert.ToInt32(Console.ReadLine());
+            return team.Where(person => person.Id == value).FirstOrDefault();
         }
         
     }
