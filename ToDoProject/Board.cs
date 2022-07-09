@@ -166,7 +166,7 @@ namespace ToDoProject
                         "Assigned person : {2}\n" +
                         "Size : {3}\n" +
                         "Line : TODO Line", item.Title, item.Description, item.AssignedPerson, item.CardSize);
-                    goto LoopEnd;
+                    break;
                 }
             }
             foreach (Card item in inProgressLine)
@@ -179,7 +179,7 @@ namespace ToDoProject
                         "Assigned person : {2}\n" +
                         "Size : {3}\n" +
                         "Line : IN PROGRESS Line", item.Title, item.Description, item.AssignedPerson, item.CardSize);
-                    goto LoopEnd;
+                    break;
                 }
             }
             foreach (Card item in doneLine)
@@ -196,34 +196,28 @@ namespace ToDoProject
                         "(1) TODO\n" +
                         "(2) IN PROGRESS\n" +
                         "(3) DONE");
-                    select = Console.ReadLine();
-                    if (select.Equals("1"))
+                    switch (Console.ReadLine()) 
                     {
-                        toDoLine.Remove(item);
-                        toDoLine.Add(item);
-                        goto LoopEnd;
-                    }
-                    else if (select.Equals("2"))
-                    {
-                        toDoLine.Remove(item);
-                        inProgressLine.Add(item);
-                        goto LoopEnd;
-                    }
-                    else if (select.Equals("3"))
-                    {
-                        toDoLine.Remove(item);
-                        doneLine.Add(item);
-                        goto LoopEnd;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Invalid Choice! Please select one of the options above!");
+                        case ("1"):
+                            toDoLine.Remove(item);
+                            toDoLine.Add(item);
+                            break;
+                        case ("2"):
+                            toDoLine.Remove(item);
+                            inProgressLine.Add(item);
+                            break;
+                        case ("3"):
+                            toDoLine.Remove(item);
+                            doneLine.Add(item);
+                            break;
+                        default:
+                            Console.WriteLine("Invalid Choice!");
+                            break;
                     }
                 }
             }
-            Console.WriteLine("Doesn't match any card!");
-        LoopEnd:
-            Console.WriteLine("Press any key to continue...");
+            Console.WriteLine("Doesn't match any card!\n" + 
+                "Press any key to continue...");
             Console.ReadLine();
         }
         public TeamMember Assign()
