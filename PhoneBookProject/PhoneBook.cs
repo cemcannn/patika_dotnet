@@ -54,10 +54,6 @@ namespace PhoneBookProject
                 {
                     Search();
                 }
-                else
-                {
-                    Console.WriteLine("Please select a valid command!");
-                }
             }
         }
 
@@ -100,7 +96,7 @@ namespace PhoneBookProject
                 select = Console.ReadLine();
                 if (select.Equals("1"))
                 {
-                    break;
+                    goto LoopEnd;
                 }
                 else if (select.Equals("2"))
                 {

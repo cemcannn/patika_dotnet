@@ -1,5 +1,0 @@
-C:\MyProjects\patika_dotnet\courses\InterfaceExample copy\obj\Debug\net5.0\AbstractExample.csproj.AssemblyReference.cache
-C:\MyProjects\patika_dotnet\courses\InterfaceExample copy\obj\Debug\net5.0\AbstractExample.GeneratedMSBuildEditorConfig.editorconfig
-C:\MyProjects\patika_dotnet\courses\InterfaceExample copy\obj\Debug\net5.0\AbstractExample.AssemblyInfoInputs.cache
-C:\MyProjects\patika_dotnet\courses\InterfaceExample copy\obj\Debug\net5.0\AbstractExample.AssemblyInfo.cs
-C:\MyProjects\patika_dotnet\courses\InterfaceExample copy\obj\Debug\net5.0\AbstractExample.csproj.CoreCompileInputs.cache
