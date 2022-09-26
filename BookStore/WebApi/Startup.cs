@@ -13,6 +13,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApi.DBOperations;
+using WebApi.Middlewares;
+using WebApi.Services;
+using System.Reflection;
 
 namespace WebApi
 {
@@ -28,14 +31,21 @@ namespace WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+        
             services.AddControllers();
+
+            //Swagger
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApi", Version = "v1" });
             });
 
+            //Database
             services.AddDbContext<BookStoreDbContext>(options=> options.UseInMemoryDatabase(databaseName:"BookStoreDB")); //Uygulamamıza context imizi göstermiş oluyoruz bu kod ile.
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
+            //Dependency Injections
+            services.AddScoped<ILoggerService, ConsoleLogger>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,6 +63,8 @@ namespace WebApi
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCustomExceptionMiddle();
 
             app.UseEndpoints(endpoints =>
             {
