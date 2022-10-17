@@ -10,9 +10,9 @@ namespace WebApi.BookOperations.GetBooks
 {
     public class GetBooksQuery
     {
-        private readonly BookStoreDbContext _dbContext; 
+        private readonly IBookStoreDbContext _dbContext; 
         private readonly IMapper _mapper;
-        public GetBooksQuery(BookStoreDbContext dbContext, IMapper mapper)
+        public GetBooksQuery(IBookStoreDbContext dbContext, IMapper mapper)
         {
             _dbContext = dbContext;
             _mapper = mapper;
@@ -37,8 +37,8 @@ namespace WebApi.BookOperations.GetBooks
     public class BookViewModel 
     {
         public string Title { get; set; }
-        public int GenreId { get; set; }
-        public int AuthorId { get; set; }
+        public string Genre { get; set; }
+        public string Author { get; set; }
         public int PageCount { get; set; }
         public string PublishDate { get; set; }
     }
